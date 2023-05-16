@@ -1,4 +1,23 @@
-import logo from './logo.svg';
+
+import Escena from "./components/escena/Escena";
+
+function App() {
+return (
+<Escena />
+)
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+/* import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -23,3 +42,4 @@ function App() {
 }
 
 export default App;
+ */
