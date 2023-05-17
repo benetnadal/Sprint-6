@@ -1,9 +1,15 @@
 
 import Escena from "./components/escena/Escena";
+import Frases from "./data/Frases"
 
 function App() {
 return (
-<Escena />
+<div>
+<Escena frase = {Frases[0]} />
+<Escena frase = {Frases[1]} />
+<Escena frase = {Frases[2]} />
+<Escena frase = {Frases[3]} />
+</div>
 )
 }
 
