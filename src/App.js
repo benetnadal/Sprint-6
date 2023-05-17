@@ -2,13 +2,15 @@
 import Escena from "./components/escena/Escena";
 import Frases from "./data/Frases"
 
+import { RequadreFrases } from "./styled";
+
 function App() {
 return (
 <div>
-<Escena frase = {Frases[0]} />
-<Escena frase = {Frases[1]} />
-<Escena frase = {Frases[2]} />
-<Escena frase = {Frases[3]} />
+  <RequadreFrases><Escena frase = {Frases[0]} /></RequadreFrases>
+  <RequadreFrases><Escena frase = {Frases[1]} /></RequadreFrases>
+  <RequadreFrases><Escena frase = {Frases[2]} /></RequadreFrases>
+  <RequadreFrases><Escena frase = {Frases[3]} /></RequadreFrases>
 </div>
 )
 }
