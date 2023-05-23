@@ -1,8 +1,5 @@
 import styled from "styled-components"
  
-import {css} from "styled-components"
-
-
 export const ContainerButtons = styled.div`
 
 display:flex;
@@ -13,6 +10,42 @@ margin: 20px 10px 0;
 gap:10px;
 `
 
+export const Container = styled.div`
+
+display:flex;
+flex-direction: column;
+justify-content: flex-start;
+
+align-items: center;
+align-content: center;
+background-color:#e7a61a;
+min-height:200px;
+min-width:500px;
+
+margin:200px 600px 20px;
+border: grey 3px solid;
+border-radius: 30px;
+h1{color:yellow; }
+
+p{margin: 10px 30px; text-align: justify}
+box-shadow: -2px 34px 96px 123px rgba(66,9,66,0.51);
+`
+
+
+export const ContainerBoto = styled.div`
+
+display:flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+align-content: center;
+background-color:none;
+min-height:100px;
+min-width:500px;
+margin:20px 600px 20px;
+
+border-radius: 30px;
+`
 
 export const BotonsEstil = styled.button`
 margin: 15px 25px;
@@ -27,6 +60,22 @@ color: red;
 border: 3px solid black;
 cursor: pointer;
 margin: auto;
+
+`;
+
+export const BotonsEstil1 = styled.button`
+text-align: center;
+align-content: center;
+padding: 10px 15px;
+border-radius: 40px;
+align-items: center;
+flex: 1 100%;
+font-size: 30px;
+color: black;
+border: 3px solid #420942;
+cursor: pointer;
+margin: auto;
+box-shadow: inset -2px -6px 37px 21px rgba(66,9,66,0.51);
 `;
 
 
