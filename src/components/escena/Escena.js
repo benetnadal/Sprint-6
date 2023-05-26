@@ -1,8 +1,6 @@
-import Frases from "../../data/Frases";
+import Frases,{FrasesObjecte} from "../../data/Frases";
 import { useState } from "react";
-import {Requadre, BotonsEstil, ContainerButtons } from "../../styled";
-
-
+import {Requadre, BotonsEstil, ContainerButtons, Content } from "../../styled";
 
 
 const Escena = (props) => {  
@@ -14,34 +12,38 @@ const Escena = (props) => {
   );
 };
 
+
+
+
 /*--------------------------*/
 
 
  const EscenaCompleta = () => {
         const [posicio, setPosicio] = useState(0);
         const numeroFrases = Frases.length;
-        /* const [color,setColor] = useState(["","","",""]) */
         const color = ["","","",""]; 
 
+const [imagenActual, setImagenActual] = useState(0);
+const cantidad = FrasesObjecte.length
 
    const seguent = () => {
     setPosicio(posicio === numeroFrases-1? 0:posicio + 1); 
-
+    setImagenActual(imagenActual === cantidad -1? 0: imagenActual + 1)
   };
 
     const anterior = () => {
-    setPosicio(posicio === 0? numeroFrases -1:posicio -1);        
+    setPosicio(posicio === 0? numeroFrases -1:posicio -1);  
+    setImagenActual(imagenActual === 0? cantidad -1: imagenActual -1)      
      };     
 
 return (
+     
+      <Content img={FrasesObjecte[posicio].img} >
 
-    <div>
-    
     <ContainerButtons>
     <BotonsEstil onClick = {anterior}>Anterior</BotonsEstil> 
     <BotonsEstil onClick = {seguent}>Següent</BotonsEstil> 
     </ContainerButtons>
-
 
     <div>
 
@@ -59,14 +61,44 @@ return (
       <Requadre fons={color[2]}>
         <Escena frase={Frases[2]} />
       </Requadre>
-      <Requadre fons={color[3]}>
+      <Requadre fons={color[3]}>  
         <Escena frase={Frases[3]} />
       </Requadre>
 </div>
 
-</div>
+</Content>
 )
      }
-
 export default EscenaCompleta
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* Funciona per fer el carrusel:
+
+        {FrasesObjecte.map((imagen, index)=> {
+return(
+  <div>
+    {imagenActual === index &&(    
+     <img key={index} src={imagen.img} alt="imagen" /> 
+    ) } </div>          
+    );})}  */}

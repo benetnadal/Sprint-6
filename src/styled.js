@@ -1,6 +1,9 @@
 import styled from "styled-components"
+
  
 export const ContainerButtons = styled.div`
+
+ 
 
 display:flex;
 flex-direction: row;
@@ -84,5 +87,48 @@ border: black 3px solid;
 border-radius: 40px;
 margin: 25px 40px;
 text-align: center;
-background-color: ${(props) => props.fons === "si"? "pink" : "none"}`;  
+background-color: ${(props) => props.fons === "si"? "pink" : "rgba(255, 255, 255, 0.6)"};
+`
 
+
+
+
+
+
+
+export const Content = styled.div`
+  background-image: url(${props => props.img});  
+   height: 100vh;
+  width: 100%;
+  background-position: center;
+background-repeat: no repeat;
+background-size: cover;
+background-attachment: fixed;
+`
+
+
+
+
+
+
+
+
+/* export const Imatge = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+` */
+
+
+/* export const Whole = styled.div`
+background-image: url(${img}); 
+
+background-position: center;
+background-repeat: no repeat;
+background-size: cover;
+background-attachment: fixed;
+`  
+ */

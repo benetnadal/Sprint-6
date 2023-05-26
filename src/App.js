@@ -20,6 +20,7 @@ function App() {
 
       {Button && <ContainerBoto><BotonsEstil1 onClick={canvi}>Comença!</BotonsEstil1></ContainerBoto>}
 
+
    </div>
   );
 }
